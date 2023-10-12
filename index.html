@@ -111,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This document accompanies the <strong><em>IUROPA Text Corpus</em></strong>, a database of judicial texts from the Court of Justice of the European Union (CJEU). The database comprises all types of judicial decisions and Advocate-General (AG) opinions.</p>
+<p>This document accompanies the <strong><em>IUROPA Text Corpus</em></strong>, a database of judicial texts from the Court of Justice of the European Union (CJEU). The database comprises all types of judicial decisions and Advocate-General (AG) opinions at the paragraph level. Where available, both the French and English texts are included.</p>
 <p>The corpus, codebook and release notes are current as of <strong>version 0.1 (release 2023-10-12)</strong>.</p>
 <p>The corpus remains work-in-progress. Please <a href="mailto:m.ovadek@ucl.ac.uk">let us know</a> if you notice an error in the data or if you have suggestions for improvements. Consult the <a href="https://iuropa.pol.gu.se/">IUROPA website</a> for more resources.</p>
 </section>
@@ -132,13 +132,140 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+<section id="rationale" class="level2">
+<h2 class="anchored" data-anchor-id="rationale">Rationale</h2>
+<p>Prior to the release of the <strong><em>IUROPA Text Corpus</em></strong>, there was no unified and comprehensive database of CJEU decisions. Individually, neither the Curia nor the Eur-Lex website contains all decisions in a plain text format. In addition, older decisions – including landmark rulings such as <em>Costa v ENEL</em> and <em>Cassis de Dijon</em> – are only partially digitized.</p>
+<p>The following table compares the number of unique documents present in the <strong><em>IUROPA Text Corpus</em></strong> with the number of documents containing plain (html) text on Curia and Eur-Lex by language version:</p>
+<div class="cell-output-display">
+<table class="table">
+<caption>Number of documents with plain text</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">English</th>
+<th style="text-align: left;">French</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Curia</td>
+<td style="text-align: left;">23351</td>
+<td style="text-align: left;">35848</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Eur-Lex</td>
+<td style="text-align: left;">31966</td>
+<td style="text-align: left;">34982</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>IUROPA</strong></td>
+<td style="text-align: left;"><strong>36162</strong></td>
+<td style="text-align: left;"><strong>46419</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Whereas most academic and legal work relating to the CJEU has relied on English texts, this comparison reveals how much more comprehensive the French language corpus is.</p>
+<p>Moreover, unlike most previous attempts to create a CJEU database, the unit of analysis in the <strong><em>IUROPA Text Corpus</em></strong> is the paragraph. Paragraphs are understood as blocks of text separated by line breaks in a document. Paragraph-level data offers more granularity and versatility than decision-level data.</p>
+</section>
+<section id="workflow" class="level2">
+<h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
+<p>The <strong><em>IUROPA Text Corpus</em></strong> is generated using a data pipeline that combines automatic and manual processing. The workflow begins by downloading all html pages from Curia and Eur-Lex relating to CJEU decisions, including AG opinions. Subsequent steps retrieve and clean the texts and metadata at the paragraph level from the downloaded pages. This automatic process is then supplemented with manually curated data on decisions for which the html pages offer incomplete or erroneous texts. The main contribution of the manually curated data is the retrieval of older paragraphs that previously only existed in PDF documents. Finally, where more than one source contains a document, the source with the highest quality text (most complete, best labelled) is selected.</p>
+<!--# add figure of workflow here -->
+</section>
 <section id="codebook" class="level2">
 <h2 class="anchored" data-anchor-id="codebook">Codebook</h2>
-<p>The <code>iuropa_text.gz.parquet</code> file contains a rectangular spreadsheet where each column</p>
+<p>The <code>iuropa_text.gz.parquet</code> file contains a rectangular spreadsheet where each row encodes information about a single paragraph of a given document. The paragraph information is spread over columns with the following names and descriptions:</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 37%">
+<col style="width: 37%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><strong>Description</strong></td>
+<td><strong>Values</strong></td>
+</tr>
+<tr class="even">
+<td><code>document_id</code></td>
+<td>Uniquely identifies each document in the corpus.</td>
+<td><code>character</code> Document identifiers.</td>
+</tr>
+<tr class="odd">
+<td><code>paragraph_id</code></td>
+<td>Uniquely identifies each paragraph in the corpus.</td>
+<td><code>character</code> Paragraph identifiers.</td>
+</tr>
+<tr class="even">
+<td><code>source</code></td>
+<td>Source of the document text.</td>
+<td><code>character</code> Curia (<code>cur</code>), Eur-Lex (<code>elx</code>) or optical character recognition (<code>ocr</code>).</td>
+</tr>
+<tr class="odd">
+<td><code>language</code></td>
+<td>Language version of the document.</td>
+<td><code>character</code> English (<code>EN</code>) or French (<code>FR</code>).</td>
+</tr>
+<tr class="even">
+<td><code>ecli</code></td>
+<td>European Case Law Identifier (ECLI).</td>
+<td><code>character</code> ECLI identifiers.</td>
+</tr>
+<tr class="odd">
+<td><code>court</code></td>
+<td>Authoring EU court.</td>
+<td><code>character</code> One of <code>Court of Justice</code>, <code>General Court</code> or <code>Civil Service Tribunal</code>.</td>
+</tr>
+<tr class="even">
+<td><code>date</code></td>
+<td>Date of publication.</td>
+<td><code>character</code> Date in format <code>YYYY-MM-DD</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>year</code></td>
+<td>Year of publication.</td>
+<td><code>integer</code> Ranges from <code>1954</code> to <code>2023</code>.</td>
+</tr>
+<tr class="even">
+<td><code>text</code></td>
+<td>Paragraph text.</td>
+<td><code>character</code> Free text.</td>
+</tr>
+<tr class="odd">
+<td><code>line_id</code></td>
+<td>Running number for paragraphs in each document.</td>
+<td><code>integer</code> Ranges from <code>1</code> to <code>n</code> paragraphs.</td>
+</tr>
+<tr class="even">
+<td><code>section</code></td>
+<td>The section of the document where the paragraph is found.</td>
+<td><code>character</code> Experimental. One of <code>presentation</code>, <code>grounds</code>, <code>costs</code>, <code>operative</code>, <code>footnotes</code>, <code>annex</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>paragraph_type</code></td>
+<td>A basic categorization of paragraph types.</td>
+<td><code>character</code> Experimental.</td>
+</tr>
+<tr class="even">
+<td><code>paragraph_number</code></td>
+<td>The official paragraph number used in case citations. Note that some older decisions did not follow the numbering scheme which later became standard.</td>
+<td><code>integer</code> Paragraph numbers. <code>0</code> indicates no official paragraph number. Several paragraphs can belong to the same <code>paragraph_number</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>nchar</code></td>
+<td>Number of characters in <code>text</code>.</td>
+<td><code>integer</code> Minimum <code>1</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>As the <strong><em>IUROPA Text Corpus</em></strong> remains work-in-progress, the information in this codebook as well as the underlying data are subject to change.</p>
+<!--# what counts as a paragraph? -->
 </section>
 <section id="release-notes" class="level2">
 <h2 class="anchored" data-anchor-id="release-notes">Release notes</h2>
-<p>Database versioning is encoded in the version number and the date of the release. <strong>Version</strong> <strong>0.1</strong> constitutes the initial release of the database. Minor adjustments and updates are only reflected in the <strong>release date</strong>, not the version number. Major changes are captured by the version number and documented below.</p>
+<p>Database versioning is encoded in the version number and the date of the release. <strong>Version</strong> <strong>0.1</strong> constitutes the initial release of the database. Minor adjustments and updates are only reflected in the <strong>release date</strong> (currently <strong>2023-10-12</strong>), not the version number. Major changes are captured by the version number and documented below.</p>
 <section id="version-0.1" class="level3">
 <h3 class="anchored" data-anchor-id="version-0.1">Version 0.1</h3>
 <ul>
