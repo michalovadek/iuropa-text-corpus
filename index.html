@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dr Michal Ovádek">
-<meta name="dcterms.date" content="2023-10-12">
+<meta name="dcterms.date" content="2023-10-19">
 
 <title>IUROPA Text Corpus</title>
 <style>
@@ -99,7 +99,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">12 Oct 2023</p>
+      <p class="date">19 Oct 2023</p>
     </div>
   </div>
   
@@ -112,12 +112,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>This document accompanies the <strong><em>IUROPA Text Corpus</em></strong>, a database of judicial texts from the Court of Justice of the European Union (CJEU). The database comprises all types of judicial decisions and Advocate-General (AG) opinions at the paragraph level. Where available, both the French and English texts are included.</p>
-<p>The corpus, codebook and release notes are current as of <strong>version 0.1 (release 2023-10-12)</strong>.</p>
+<p>The corpus, codebook and release notes are current as of <strong>version 0.1 (release 2023-10-19)</strong>.</p>
 <p>The corpus remains work-in-progress. Please <a href="mailto:m.ovadek@ucl.ac.uk">let us know</a> if you notice an error in the data or if you have suggestions for improvements. Consult the <a href="https://iuropa.pol.gu.se/">IUROPA website</a> for more resources.</p>
 </section>
 <section id="citation" class="level2">
 <h2 class="anchored" data-anchor-id="citation">Citation</h2>
-<p>When using any part of the <strong><em>IUROPA Text Corpus</em></strong>, please refer to the following citation:</p>
+<p>When using any part of the <strong><em>IUROPA Text Corpus</em></strong> (including this page), please refer to the following citation:</p>
 <p>Ovádek, Michal, Joshua Fjelstul, Daniel Naurin and Johan Lindholm. 2023. “The IUROPA Text Corpus”, in Lindholm, Johan, Daniel Naurin, Urska Sadl, Anna Wallerman Ghavanini, Stein Arne Brekke, Joshua Fjelstul, Silje Synnøve Lyder Hermansen, Olof Larsson, Andreas Moberg, Moa Näsström, Michal Ovádek, Tommaso Pavone, and Philipp Schroeder, The Court of Justice of the European Union (CJEU) Database, IUROPA, https://iuropa.pol.gu.se/.</p>
 <p>In BibTex form:</p>
 <div class="cell">
@@ -134,7 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="rationale" class="level2">
 <h2 class="anchored" data-anchor-id="rationale">Rationale</h2>
-<p>Prior to the release of the <strong><em>IUROPA Text Corpus</em></strong>, there was no unified and comprehensive database of CJEU decisions. Individually, neither the Curia nor the Eur-Lex website contains all decisions in a plain text format. In addition, older decisions – including landmark rulings such as <em>Costa v ENEL</em> and <em>Cassis de Dijon</em> – are only partially digitized.</p>
+<p>Prior to the release of the <strong><em>IUROPA Text Corpus</em></strong>, there was no unified and comprehensive database of CJEU decisions. Individually, neither the Curia nor the Eur-Lex website contains all decisions in a plain text format. In addition, older decisions – including landmark rulings such as <em>Costa v ENEL</em> and <em>Cassis de Dijon</em> – are only partially and imperfectly digitized.</p>
 <p>The following table compares the number of unique documents present in the <strong><em>IUROPA Text Corpus</em></strong> with the number of documents containing plain (html) text on Curia and Eur-Lex by language version:</p>
 <div class="cell-output-display">
 <table class="table">
@@ -149,27 +149,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Curia</td>
-<td style="text-align: left;">23351</td>
-<td style="text-align: left;">35848</td>
+<td style="text-align: left;">23394</td>
+<td style="text-align: left;">35900</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Eur-Lex</td>
-<td style="text-align: left;">31966</td>
-<td style="text-align: left;">34982</td>
+<td style="text-align: left;">31992</td>
+<td style="text-align: left;">35013</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>IUROPA</strong></td>
-<td style="text-align: left;"><strong>36162</strong></td>
-<td style="text-align: left;"><strong>46419</strong></td>
+<td style="text-align: left;"><strong>36206</strong></td>
+<td style="text-align: left;"><strong>46471</strong></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Whereas most academic and legal work relating to the CJEU has relied on English texts, this comparison reveals how much more comprehensive the French language corpus is.</p>
-<p>Moreover, unlike most previous attempts to create a CJEU database, the unit of analysis in the <strong><em>IUROPA Text Corpus</em></strong> is the paragraph. Paragraphs are understood as blocks of text separated by line breaks in a document. Paragraph-level data offers more granularity and versatility than decision-level data.</p>
+<p>Whereas most academic and legal work relating to the CJEU has relied on English texts, this comparison reveals how much more comprehensive the French language corpus is. French remains the working language of the CJEU and not all decisions are translated into English.</p>
+<p>Moreover, unlike most previous attempts to create a CJEU database, the unit of analysis in the <strong><em>IUROPA Text Corpus</em></strong> is the paragraph. Paragraphs are understood as blocks of text separated by line breaks in a document. This definition comprises both conventionally designated (and numbered) paragraphs and individual lines with text, such as presentation of lawyers and judges. Overall, paragraph-level data offers more granularity and versatility than decision-level data.</p>
 </section>
-<section id="workflow" class="level2">
-<h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>As of <strong>version 0.1 (release 2023-10-19)</strong>, the <strong><em>IUROPA Text Corpus</em></strong> contains a total of <code>10059348</code> paragraphs across <code>82677</code> documents. The number of documents in the corpus varies significantly over time, but also between language versions.</p>
+<div class="quarto-figure quarto-figure-center" style="text-align: center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Number of documents per year</figcaption><p></p>
+<p><img src="plots/docs_n_docs_year.png" class="quarto-discovered-preview-image img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The maximum number of French documents per year (<code>1964</code>) occurs in <code>2018</code>. An average year contains <code>664</code> documents in French and <code>517</code> documents in English.</p>
+<p>The documents contain a varying number of paragraphs, ranging from <code>2</code> to <code>7157</code>. On average, French documents have <code>114</code> paragraphs, while English documents have an average of <code>105</code> paragraphs.</p>
+<div class="quarto-figure quarto-figure-center" style="text-align: center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Average number of paragraphs per document</figcaption><p></p>
+<p><img src="plots/docs_mean_n_paras.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The large drops in the average number of paragraphs in the 1970s and 1980s can be attributed to the incomplete digitization of CJEU documents in that period. Having made more progress on French documents so far (see below), we can see how much of a difference full digitization makes compared to the highly imperfect plain texts found on Eur-Lex.</p>
+<p>The digitization effect is similarly visible at the level of words-per-paragraph. More generally, average differences between language versions stem not only from linguistic variance between English and French, but also from differences between the two samples – recall that French is the default language for the vast majority of documents, not all of which end up being translated into English.</p>
+<div class="quarto-figure quarto-figure-center" style="text-align: center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Average number of words per paragraph</figcaption><p></p>
+<p><img src="plots/words_mean_n_paras.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>On average, French paragraphs contain <code>49</code> words, while English paragraphs have an average of <code>50</code> words.</p>
+<p>A major advantage of the <strong><em>IUROPA Text Corpus</em></strong> is the inclusion of digitized texts of older decisions. After applying state-of-the-art optical character recognition (OCR) to correctly segmented PDFs of documents from 1954 to 1989, the digitization pipeline involves highly labour-intensive cleaning of plain texts to ensure their high quality at the paragraph level.</p>
+<div class="quarto-figure quarto-figure-center" style="text-align: center">
+<figure class="figure">
+<p></p><figcaption class="figure-caption">Number of processed OCR pages (current progress, remaining pages in shaded bars)</figcaption><p></p>
+<p><img src="plots/ocr_coding_progress.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>The digitization task remains work-in-progress. Cleaned data is added to the corpus on a rolling basis. Of the total <code>86649</code> pages of text that require manual checking or cleaning, <code>30691</code> have been completed and added to the corpus.</p>
+<p>Priority has been given to French documents: so far, <code>54%</code> of pages in French and <code>14%</code> of English pages have been processed. <a href="mailto:m.ovadek@ucl.ac.uk">Contact us</a> if you wish to contribute to this ongoing process.</p>
+</section>
+<section id="process" class="level2">
+<h2 class="anchored" data-anchor-id="process">Process</h2>
 <p>The <strong><em>IUROPA Text Corpus</em></strong> is generated using a data pipeline that combines automatic and manual processing. The workflow begins by downloading all html pages from Curia and Eur-Lex relating to CJEU decisions, including AG opinions. Subsequent steps retrieve and clean the texts and metadata at the paragraph level from the downloaded pages. This automatic process is then supplemented with manually curated data on decisions for which the html pages offer incomplete or erroneous texts. The main contribution of the manually curated data is the retrieval of older paragraphs that previously only existed in PDF documents. Finally, where more than one source contains a document, the source with the highest quality text (most complete, best labelled) is selected.</p>
 <!--# add figure of workflow here -->
 </section>
@@ -178,8 +214,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The <code>iuropa_text.gz.parquet</code> file contains a rectangular spreadsheet where each row encodes information about a single paragraph of a given document. The paragraph information is spread over columns with the following names and descriptions:</p>
 <table class="table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 37%">
+<col style="width: 19%">
+<col style="width: 43%">
 <col style="width: 37%">
 </colgroup>
 <tbody>
@@ -261,11 +297,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>As the <strong><em>IUROPA Text Corpus</em></strong> remains work-in-progress, the information in this codebook as well as the underlying data are subject to change.</p>
-<!--# what counts as a paragraph? -->
 </section>
 <section id="release-notes" class="level2">
 <h2 class="anchored" data-anchor-id="release-notes">Release notes</h2>
-<p>Database versioning is encoded in the version number and the date of the release. <strong>Version</strong> <strong>0.1</strong> constitutes the initial release of the database. Minor adjustments and updates are only reflected in the <strong>release date</strong> (currently <strong>2023-10-12</strong>), not the version number. Major changes are captured by the version number and documented below.</p>
+<p>Database versioning is encoded in the version number and the date of the release. <strong>Version</strong> <strong>0.1</strong> constitutes the initial release of the database. Minor adjustments and updates are only reflected in the <strong>release date</strong> (currently <strong>2023-10-19</strong>), not the version number. Major changes are captured by the version number and documented below.</p>
 <section id="version-0.1" class="level3">
 <h3 class="anchored" data-anchor-id="version-0.1">Version 0.1</h3>
 <ul>
