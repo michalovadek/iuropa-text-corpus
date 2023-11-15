@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dr Michal Ovádek">
-<meta name="dcterms.date" content="2023-11-04">
+<meta name="dcterms.date" content="2023-11-15">
 
 <title>IUROPA Text Corpus</title>
 <style>
@@ -99,7 +99,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">04 Nov 2023</p>
+      <p class="date">15 Nov 2023</p>
     </div>
   </div>
   
@@ -112,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>This document accompanies the <strong><em>IUROPA Text Corpus</em></strong>, a database of judicial texts from the Court of Justice of the European Union (CJEU). The database comprises all types of judicial decisions and Advocate-General (AG) opinions at the paragraph level. Where available, both the French and English texts are included.</p>
-<p>The corpus, codebook and release notes are current as of <strong>version 0.1 (release 2023-11-04)</strong>.</p>
+<p>The corpus, codebook and release notes are current as of <strong>version 0.1 (release 2023-11-15)</strong>.</p>
 <p>The corpus remains work-in-progress. Please <a href="mailto:m.ovadek@ucl.ac.uk">let us know</a> if you notice an error in the data or if you have suggestions for improvements. Consult the <a href="https://iuropa.pol.gu.se/">IUROPA website</a> for more resources.</p>
 </section>
 <section id="citation" class="level2">
@@ -149,18 +149,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Curia</td>
-<td style="text-align: left;">23439</td>
-<td style="text-align: left;">35957</td>
+<td style="text-align: left;">23473</td>
+<td style="text-align: left;">36001</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Eur-Lex</td>
-<td style="text-align: left;">32034</td>
-<td style="text-align: left;">35060</td>
+<td style="text-align: left;">32061</td>
+<td style="text-align: left;">35089</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>IUROPA</strong></td>
-<td style="text-align: left;"><strong>36251</strong></td>
-<td style="text-align: left;"><strong>46530</strong></td>
+<td style="text-align: left;"><strong>36285</strong></td>
+<td style="text-align: left;"><strong>46575</strong></td>
 </tr>
 </tbody>
 </table>
@@ -170,14 +170,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>As of <strong>version 0.1 (release 2023-11-04)</strong>, the <strong><em>IUROPA Text Corpus</em></strong> contains a total of <code>10076341</code> paragraphs across <code>82781</code> documents. The number of documents in the corpus varies significantly over time, but also between language versions.</p>
+<p>As of <strong>version 0.1 (release 2023-11-15)</strong>, the <strong><em>IUROPA Text Corpus</em></strong> contains a total of <code>10091819</code> paragraphs across <code>82860</code> documents. The number of documents in the corpus varies significantly over time, but also between language versions.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align: center">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Number of documents per year</figcaption><p></p>
 <p><img src="plots/docs_n_docs_year.png" class="quarto-discovered-preview-image img-fluid figure-img"></p>
 </figure>
 </div>
-<p>The maximum number of French documents per year (<code>1964</code>) occurs in <code>2018</code>. An average year contains <code>665</code> documents in French and <code>518</code> documents in English.</p>
+<p>The maximum number of French documents per year (<code>1964</code>) occurs in <code>2018</code>. An average year contains <code>665</code> documents in French and <code>518</code> documents in English. In instances when only the English version was made available in plain text – an issue almost exclusively affecting the General Court – the corpus might not include the French version yet. Otherwise and as a general rule, the French language sub-corpus is much more comprehensive.</p>
 <p>The documents contain a varying number of paragraphs, ranging from <code>2</code> to <code>7157</code>. On average, French documents have <code>114</code> paragraphs, while English documents have an average of <code>106</code> paragraphs. In a few cases, the corpus includes also the so-called “report for the hearing” (“rapport d’audience”) which the CJEU produced from the 1980s until 2012. Most of these reports have not yet been released to the public, but in the future they should become a part of the (or a separate) database.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align: center">
 <figure class="figure">
@@ -201,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="plots/ocr_coding_progress.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>The digitization task remains work-in-progress. Cleaned data is added to the corpus on a rolling basis. Of the total <code>86649</code> pages of text that require manual checking or cleaning, <code>30738</code> have been completed and added to the corpus.</p>
+<p>The digitization task remains work-in-progress. Cleaned data is added to the corpus on a rolling basis. Of the total <code>86649</code> pages of text that require manual checking or cleaning, <code>30790</code> have been completed and added to the corpus.</p>
 <p>Priority has been given to French documents: so far, <code>55%</code> of pages in French and <code>14%</code> of English pages have been processed. <a href="mailto:m.ovadek@ucl.ac.uk">Contact us</a> if you wish to contribute to this ongoing work.</p>
 </section>
 <section id="process" class="level2">
@@ -296,11 +296,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>As the <strong><em>IUROPA Text Corpus</em></strong> remains work-in-progress, the information in this codebook as well as the underlying data are subject to change.</p>
+<p>As the <strong><em>IUROPA Text Corpus</em></strong> remains work-in-progress, the information in this codebook as well as the underlying data are subject to change. The database version is included in the metadata of the <code>iuropa_text.gz.parquet</code> file.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 </section>
 <section id="release-notes" class="level2">
 <h2 class="anchored" data-anchor-id="release-notes">Release notes</h2>
-<p>Database versioning is encoded in the version number and the date of the release. <strong>Version</strong> <strong>0.1</strong> constitutes the initial release of the database. Minor adjustments and updates are only reflected in the <strong>release date</strong> (currently <strong>2023-11-04</strong>), not the version number. Major changes are captured by the version number and documented below.</p>
+<p>Database versioning is encoded in the version number and the date of the release. <strong>Version</strong> <strong>0.1</strong> constitutes the initial release of the database. Minor adjustments and updates are only reflected in the <strong>release date</strong> (currently <strong>2023-11-15</strong>), not the version number. Major changes are captured by the version number and documented below.</p>
 <section id="version-0.1" class="level3">
 <h3 class="anchored" data-anchor-id="version-0.1">Version 0.1</h3>
 <ul>
@@ -309,7 +309,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 
-</main>
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Access the version number by running <code>attributes()</code> on the loaded data frame in R or <code>parquet.read_schema().metadata</code> on the file path in Python after importing the <code>pyarrow</code> <code>parquet</code> module.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
