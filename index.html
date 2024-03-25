@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dr Michal Ovádek">
-<meta name="dcterms.date" content="2023-12-30">
+<meta name="dcterms.date" content="2024-03-25">
 
 <title>IUROPA Text Corpus</title>
 <style>
@@ -99,7 +99,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">30 Dec 2023</p>
+      <p class="date">25 Mar 2024</p>
     </div>
   </div>
   
@@ -112,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>This document accompanies the <strong><em>IUROPA Text Corpus</em></strong>, a database of judicial texts from the Court of Justice of the European Union (CJEU). The database comprises all types of judicial decisions and Advocate-General (AG) opinions at the paragraph level. Where available, both the French and English texts are included.</p>
-<p>The corpus, codebook and release notes are current as of <strong>version 0.2 (release 2023-12-30)</strong>.</p>
+<p>The corpus, codebook and release notes are current as of <strong>version 0.3 (release 2024-03-25)</strong>.</p>
 <p>The corpus remains work-in-progress. Please <a href="mailto:m.ovadek@ucl.ac.uk">let us know</a> if you notice an error in the data or if you have suggestions for improvements. Consult the <a href="https://iuropa.pol.gu.se/">IUROPA website</a> for more resources.</p>
 </section>
 <section id="citation" class="level2">
@@ -149,18 +149,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Curia</td>
-<td style="text-align: left;">23637</td>
-<td style="text-align: left;">36268</td>
+<td style="text-align: left;">23933</td>
+<td style="text-align: left;">36679</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Eur-Lex</td>
-<td style="text-align: left;">32187</td>
-<td style="text-align: left;">35260</td>
+<td style="text-align: left;">32418</td>
+<td style="text-align: left;">35569</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>IUROPA</strong></td>
-<td style="text-align: left;"><strong>36451</strong></td>
-<td style="text-align: left;"><strong>46845</strong></td>
+<td style="text-align: left;"><strong>36757</strong></td>
+<td style="text-align: left;"><strong>47313</strong></td>
 </tr>
 </tbody>
 </table>
@@ -170,39 +170,101 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>As of <strong>version 0.2 (release 2023-12-30)</strong>, the <strong><em>IUROPA Text Corpus</em></strong> contains a total of <code>10165334</code> paragraphs across <code>83296</code> documents. The number of documents in the corpus varies significantly over time, but also between language versions.</p>
+<p>As of <strong>version 0.3 (release 2024-03-25)</strong>, the <strong><em>IUROPA Text Corpus</em></strong> contains a total of <code>10586587</code> paragraphs across <code>84070</code> documents. The number of documents in the corpus varies significantly not only over time, but also between courts and language versions.</p>
+<div class="cell-output-display">
+<table class="table">
+<caption>Comparison of EU courts</caption>
+<colgroup>
+<col style="width: 17%">
+<col style="width: 15%">
+<col style="width: 13%">
+<col style="width: 14%">
+<col style="width: 13%">
+<col style="width: 14%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Court</th>
+<th style="text-align: right;">Number of documents</th>
+<th style="text-align: right;">Paragraphs (min)</th>
+<th style="text-align: right;">Paragraphs (mean)</th>
+<th style="text-align: right;">Paragraphs (max)</th>
+<th style="text-align: right;">Paragraphs (total)</th>
+<th style="text-align: right;">Words (total)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Civil Service Tribunal</td>
+<td style="text-align: right;">2600</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">94.23</td>
+<td style="text-align: right;">659</td>
+<td style="text-align: right;">244998</td>
+<td style="text-align: right;">10271423</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Court of Justice</td>
+<td style="text-align: right;">58397</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">122.29</td>
+<td style="text-align: right;">5219</td>
+<td style="text-align: right;">7141175</td>
+<td style="text-align: right;">338458044</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">General Court</td>
+<td style="text-align: right;">23073</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">138.71</td>
+<td style="text-align: right;">7157</td>
+<td style="text-align: right;">3200414</td>
+<td style="text-align: right;">170192270</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The corpus contains all available documents for the Court of Justice, the General Court and the now defunct Civil Service Tribunal. Most documents and paragraphs come from the Court of Justice whose existence pre-dates the European Economic Community. The General Court was established in 1989 as the Court of First Instance. The Civil Service Tribunal was established in 2005 and abolished in 2016. All types of court decisions, including AG opinions, form part of the corpus.</p>
+<p>As a general rule, the working language of all three courts is French. Subsequently, documents are translated into English and other EU languages. As the workload of the courts increased, the pressure on selective translation increased as well.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align: center">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Number of documents per year</figcaption><p></p>
 <p><img src="plots/docs_n_docs_year.png" class="quarto-discovered-preview-image img-fluid figure-img"></p>
 </figure>
 </div>
-<p>The maximum number of French documents per year (<code>1964</code>) occurs in <code>2018</code>. An average year contains <code>669</code> documents in French and <code>521</code> documents in English. In instances when only the English version was made available in plain text – an issue almost exclusively affecting the General Court – the corpus might not include the French version yet. Otherwise and as a general rule, the French language sub-corpus is much more comprehensive.</p>
-<p>The documents contain a varying number of paragraphs, ranging from <code>2</code> to <code>7157</code>. On average, French documents have <code>114</code> paragraphs, while English documents have an average of <code>106</code> paragraphs. In a few cases, the corpus includes also the so-called “report for the hearing” (“rapport d’audience”) which the CJEU produced from the 1980s until 2012. Most of these reports have not yet been released to the public, but in the future they should become a part of the (or a separate) database.</p>
+<p>The maximum number of French documents per year (<code>1966</code>) occurs in <code>2018</code>. An average year contains <code>666</code> documents in French and <code>518</code> documents in English. In instances when only the English version was made available in plain text – an issue almost exclusively affecting the General Court – the corpus might not include the French version (though if at least a summary is available, it is included). Otherwise and as a general rule, the French language sub-corpus is much more comprehensive.</p>
+<p>The documents contain a varying number of paragraphs, ranging from <code>2</code> to <code>7157</code>. On average, French documents have <code>120</code> paragraphs, while English documents have an average of <code>118</code> paragraphs. In some cases, the corpus includes also the so-called “report for the hearing” (“rapport d’audience”) which the CJEU produced from the 1980s until 2012. Most of these reports have not yet been released to the public, but in the future they should become a part of the (or a separate) database.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align: center">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Average number of paragraphs per document</figcaption><p></p>
 <p><img src="plots/docs_mean_n_paras.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>The large drops in the average number of paragraphs in the 1970s and 1980s can be attributed to the incomplete digitization of CJEU documents in that period. Having made more progress on French documents so far (see below), we can see how much of a difference full digitization makes compared to the highly imperfect plain texts found on Eur-Lex.</p>
-<p>The digitization effect is similarly visible at the level of words-per-paragraph. More generally, average differences between language versions stem not only from linguistic variance between English and French, but also from differences between the two samples – recall that French is the default language for the vast majority of documents, not all of which end up being translated into English.</p>
+<!--# The large drops in the average number of paragraphs in the 1970s and 1980s can be attributed to the incomplete digitization of CJEU documents in that period. Having made more progress on French documents so far (see below), we can see how much of a difference full digitization makes compared to the highly imperfect plain texts found on Eur-Lex. The digitization effect is similarly visible at the level of words-per-paragraph. -->
+<p>More generally, average differences between language versions stem not only from linguistic variance between English and French, but also from differences between the two samples – recall that French is the default language for the vast majority of documents, not all of which end up being translated into English.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align: center">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Average number of words per paragraph</figcaption><p></p>
 <p><img src="plots/words_mean_n_paras.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>On average, French paragraphs contain <code>49</code> words, while English paragraphs have an average of <code>50</code> words.</p>
-<p>As hinted at above, a major contribution of the <strong><em>IUROPA Text Corpus</em></strong> is the inclusion of digitized texts of older decisions. After applying state-of-the-art optical character recognition (OCR) to correctly segmented PDFs of documents from 1954 to 1989, the digitization pipeline involves highly labour-intensive cleaning of plain texts to ensure their high quality at the paragraph level.</p>
+<p>On average, French paragraphs contain <code>48</code> words, while English paragraphs have an average of <code>49</code> words.</p>
+<p>A major contribution of the <strong><em>IUROPA Text Corpus</em></strong> is the inclusion of digitized texts of older decisions. After applying state-of-the-art optical character recognition (OCR) to correctly segmented PDFs of documents from 1954 to 1989, the digitization pipeline involves highly labour-intensive cleaning of plain texts to ensure their high quality at the paragraph level.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align: center">
 <figure class="figure">
-<p></p><figcaption class="figure-caption">Number of processed OCR pages (current progress, remaining pages in shaded bars)</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Number of processed OCR pages (current manual progress, remaining pages processed using AI in shaded bars)</figcaption><p></p>
 <p><img src="plots/ocr_coding_progress.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>The digitization task remains work-in-progress. Cleaned data is added to the corpus on a rolling basis. Of the total <code>86649</code> pages of text that require manual checking or cleaning, <code>31165</code> have been completed and added to the corpus.</p>
-<p>Priority has been given to French documents: so far, <code>55%</code> of pages in French and <code>14%</code> of English pages have been processed. <a href="mailto:m.ovadek@ucl.ac.uk">Contact us</a> if you wish to contribute to this ongoing work.</p>
+<p>The digitization task remains work-in-progress. Cleaned data is added to the corpus on a rolling basis. Of the total <code>86649</code> pages of text that require manual checking or cleaning, <code>31230</code> have been completed and added to the corpus.</p>
+<p>Priority has been given to French documents: so far, <code>56%</code> of pages in French and <code>14%</code> of English pages have been processed. <a href="mailto:m.ovadek@ucl.ac.uk">Contact us</a> if you wish to contribute to this ongoing work.</p>
+<p>As of version 0.3, all remaining documents were digitized using a combination of OCR and Open AI’s Generative Pre-trained Transformer 4 (GPT-4, in its early 2024 state) thanks to a collaboration with University of Oslo’s Centre for Computational and Data Science. The OCR output was fed to GPT-4 accompanied by the following prompt:</p>
+<blockquote class="blockquote">
+<p>Consider the following OCR output text and make corrections. Please note that the text to be corrected is in <language>. Fix spelling mistakes, do not add/remove words, make consistent word spacing, add missing spaces, fix font case issues within words, fix numbering issues, make consistent line breaks. In addition, please remove all unnecessary newline characters that break paragraphs incorrectly, detect paragraphs and ensure to add an extra line between paragraphs. Here is the text:</language></p>
+</blockquote>
+<p>The prompt was optimized by looking at edit (Levenshtein) distance between the GPT-augmented output and a subset of manually corrected OCR documents. In our testing, the normalized edit distance between the GPT- and manually corrected document was low – below 0.05 with 0 indicating identity – which suggests a satisfactory quality of output.</p>
+<p>We maintain that conclusion after manually inspecting a small subset of the processed documents. While the GPT-processed documents contain more errors than the manually corrected ones, ranging from undetected paragraphs to undesired word completion, for the most part they faithfully reproduce the underlying PDF documents. We continue to make manual corrections to the corpus in every update.</p>
 </section>
 <section id="process" class="level2">
 <h2 class="anchored" data-anchor-id="process">Process</h2>
@@ -212,7 +274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="standardization">Standardization</h3>
 <p>In the final stage of preparing the database, a number of standardization steps are performed on the texts to decrease substantively meaningless variation that is likely to be undesired by most users. Namely, the following standardization steps are implemented at the paragraph level:</p>
 <ul>
-<li>guillemets <code>« »</code> are preceded and followed by a single space (<code></code>)</li>
+<li>guillemets <code>« »</code> are preceded and followed by a single space ()</li>
 <li>all types of dashes and hyphens are replaced by a single <code>-</code></li>
 <li>all <code>n°</code> etc are converted into explicit <code>no</code> or <code>nos</code></li>
 <li>commas <code>,</code> are preceded by a space when the preceding character is a letter or a number</li>
@@ -222,7 +284,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>all types of characters used as double quotation marks except guillemets are replaced by <code>"</code></li>
 <li>a sequence of single quotation marks is replaced by a single <code>"</code></li>
 <li>opening parentheses <code>([{</code> are never followed by a space, closing parentheses <code>)]}</code> are never preceded by a space</li>
-<li>all types of whitespace and blanks are converted into a single space (<code></code>)</li>
+<li>all types of whitespace and blanks are converted into a single space ()</li>
 <li>no leading or trailing whitespace at the beginning and end of paragraphs</li>
 </ul>
 </section>
@@ -232,8 +294,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The <code>iuropa_text.gz.parquet</code> file contains a rectangular spreadsheet where each row encodes information about a single paragraph of a given document. The paragraph information is spread over columns with the following names and descriptions:</p>
 <table class="table">
 <colgroup>
-<col style="width: 23%">
-<col style="width: 40%">
+<col style="width: 25%">
+<col style="width: 38%">
 <col style="width: 36%">
 </colgroup>
 <tbody>
@@ -255,7 +317,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td><code>source</code></td>
 <td>Source of the document text.</td>
-<td><code>character</code> Curia (<code>cur</code>), Eur-Lex (<code>elx</code>) or optical character recognition (<code>ocr</code>).</td>
+<td><code>character</code> Curia (<code>cur</code>), Eur-Lex (<code>elx</code>), manually validated optical character recognition (<code>ocr</code>) or AI-processed optical character recognition (<code>gpt</code>).</td>
 </tr>
 <tr class="odd">
 <td><code>language</code></td>
@@ -280,7 +342,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><code>year</code></td>
 <td>Year of publication.</td>
-<td><code>integer</code> Ranges from <code>1954</code> to <code>2023</code>.</td>
+<td><code>integer</code> Ranges from <code>1954</code> to <code>2024</code>.</td>
 </tr>
 <tr class="even">
 <td><code>text</code></td>
@@ -300,7 +362,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td><code>paragraph_type</code></td>
 <td>A basic categorization of paragraph types.</td>
-<td><code>character</code> Experimental.</td>
+<td><code>character</code> Experimental. One of <code>heading</code>, <code>paragraph</code>, <code>quote</code>, <code>footnote</code>, <code>keywords</code>, <code>table</code>.</td>
 </tr>
 <tr class="even">
 <td><code>paragraph_number</code></td>
@@ -318,7 +380,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="release-notes" class="level2">
 <h2 class="anchored" data-anchor-id="release-notes">Release notes</h2>
-<p>Database versioning is encoded in the version number and the date of the release. Version 0.1 constituted the initial release of the database. Minor adjustments and updates are only reflected in the <strong>release date</strong> (currently <strong>2023-12-30</strong>), not the version number (currently <strong>0.2</strong>). Major changes are captured by the version number and documented below.</p>
+<p>Database versioning is encoded in the version number and the date of the release. Version 0.1 constituted the initial release of the database. Minor adjustments and updates are only reflected in the <strong>release date</strong> (currently <strong>2024-03-25</strong>), not the version number (currently <strong>0.3</strong>). Major changes are captured by the version number and documented below.</p>
+<section id="version-0.3" class="level3">
+<h3 class="anchored" data-anchor-id="version-0.3">Version 0.3</h3>
+<ul>
+<li>Digitization of older documents completed using an OCR-to-GPT pipeline</li>
+<li>Where full decision was missing, but a summary exists, the summary is used in the corpus (French documents only)</li>
+</ul>
+</section>
 <section id="version-0.2" class="level3">
 <h3 class="anchored" data-anchor-id="version-0.2">Version 0.2</h3>
 <ul>
