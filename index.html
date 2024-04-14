@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dr Michal Ovádek">
-<meta name="dcterms.date" content="2024-04-13">
+<meta name="dcterms.date" content="2024-04-14">
 
 <title>IUROPA Text Corpus</title>
 <style>
@@ -99,7 +99,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">13 Apr 2024</p>
+      <p class="date">14 Apr 2024</p>
     </div>
   </div>
   
@@ -112,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>This document accompanies the <strong><em>IUROPA Text Corpus</em></strong>, a database of judicial texts from the Court of Justice of the European Union (CJEU). The database comprises all types of judicial decisions and Advocate-General (AG) opinions at the paragraph level. Where available, both the French and English texts are included.</p>
-<p>The corpus, codebook and release notes are current as of <strong>version 0.3 (release 2024-04-13)</strong>.</p>
+<p>The corpus, codebook and release notes are current as of <strong>version 0.3 (release 2024-04-14)</strong>.</p>
 <p>The corpus remains work-in-progress. Please <a href="mailto:m.ovadek@ucl.ac.uk">let us know</a> if you notice an error in the data or if you have suggestions for improvements. Consult the <a href="https://iuropa.pol.gu.se/">IUROPA website</a> for more resources.</p>
 </section>
 <section id="citation" class="level2">
@@ -170,7 +170,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>As of <strong>version 0.3 (release 2024-04-13)</strong>, the <strong><em>IUROPA Text Corpus</em></strong> contains a total of <code>10603178</code> paragraphs across <code>84187</code> documents. The number of documents in the corpus varies significantly not only over time, but also between courts and language versions.</p>
+<p>As of <strong>version 0.3 (release 2024-04-14)</strong>, the <strong><em>IUROPA Text Corpus</em></strong> contains a total of <code>10603178</code> paragraphs across <code>84187</code> documents. The number of documents in the corpus varies significantly not only over time, but also between courts and language versions.</p>
 <div class="cell-output-display">
 <table class="table">
 <caption>Comparison of EU courts</caption>
@@ -206,12 +206,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td style="text-align: left;">Court of Justice</td>
-<td style="text-align: right;">58466</td>
+<td style="text-align: right;">58467</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">122.33</td>
 <td style="text-align: right;">5219</td>
-<td style="text-align: right;">7151909</td>
-<td style="text-align: right;">338973709</td>
+<td style="text-align: right;">7152218</td>
+<td style="text-align: right;">338987458</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">General Court</td>
@@ -221,15 +221,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">7146</td>
 <td style="text-align: right;">3205962</td>
 <td style="text-align: right;">170459544</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">309</td>
-<td style="text-align: right;">309.00</td>
-<td style="text-align: right;">309</td>
-<td style="text-align: right;">309</td>
-<td style="text-align: right;">13748</td>
 </tr>
 </tbody>
 </table>
@@ -266,7 +257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="plots/ocr_coding_progress.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>The digitization task remains work-in-progress. Cleaned data is added to the corpus on a rolling basis. Of the total <code>86649</code> pages of text that require manual checking or cleaning, <code>31340</code> have been completed and added to the corpus.</p>
+<p>The digitization task remains work-in-progress. Cleaned data is added to the corpus on a rolling basis. Of the total <code>86649</code> pages of text that require manual checking or cleaning, <code>31343</code> have been completed and added to the corpus.</p>
 <p>Priority has been given to French documents: so far, <code>56%</code> of pages in French and <code>14%</code> of English pages have been processed. <a href="mailto:m.ovadek@ucl.ac.uk">Contact us</a> if you wish to contribute to this ongoing work.</p>
 <p>As of version 0.3, all remaining documents were digitized using a combination of OCR and Open AI’s Generative Pre-trained Transformer 4 (GPT-4, in its early 2024 state) thanks to a collaboration with University of Oslo’s Centre for Computational and Data Science. The OCR output was fed to GPT-4 accompanied by the following prompt:</p>
 <blockquote class="blockquote">
@@ -283,7 +274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="standardization">Standardization</h3>
 <p>In the final stage of preparing the database, a number of standardization steps are performed on the texts to decrease substantively meaningless variation that is likely to be undesired by most users. Namely, the following standardization steps are implemented at the paragraph level:</p>
 <ul>
-<li>guillemets <code>« »</code> are preceded and followed by a single space ()</li>
+<li>guillemets <code>« »</code> are preceded and followed by a single space (<code></code>)</li>
 <li>all types of dashes and hyphens are replaced by a single <code>-</code></li>
 <li>all <code>n°</code> etc are converted into explicit <code>no</code> or <code>nos</code></li>
 <li>commas <code>,</code> are preceded by a space when the preceding character is a letter or a number</li>
@@ -294,7 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>a sequence of single quotation marks is replaced by a single <code>"</code></li>
 <li>opening parentheses <code>([{</code> are never followed by a space, closing parentheses <code>)]}</code> are never preceded by a space</li>
 <li>French characters <code>æ</code> and <code>œ</code> are replaced by <code>ae</code> and <code>oe</code> respectively</li>
-<li>all types of whitespace and blanks are converted into a single space ()</li>
+<li>all types of whitespace and blanks are converted into a single space (<code></code>)</li>
 <li>no leading or trailing whitespace at the beginning and end of paragraphs</li>
 </ul>
 </section>
@@ -390,7 +381,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="release-notes" class="level2">
 <h2 class="anchored" data-anchor-id="release-notes">Release notes</h2>
-<p>Database versioning is encoded in the version number and the date of the release. Version 0.1 constituted the initial release of the database. Minor adjustments and updates are only reflected in the <strong>release date</strong> (currently <strong>2024-04-13</strong>), not the version number (currently <strong>0.3</strong>). Major changes are captured by the version number and documented below.</p>
+<p>Database versioning is encoded in the version number and the date of the release. Version 0.1 constituted the initial release of the database. Minor adjustments and updates are only reflected in the <strong>release date</strong> (currently <strong>2024-04-14</strong>), not the version number (currently <strong>0.3</strong>). Major changes are captured by the version number and documented below.</p>
 <section id="version-0.3" class="level3">
 <h3 class="anchored" data-anchor-id="version-0.3">Version 0.3</h3>
 <ul>
