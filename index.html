@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dr Michal Ovádek">
-<meta name="dcterms.date" content="2024-04-14">
+<meta name="dcterms.date" content="2024-06-16">
 
 <title>IUROPA Text Corpus</title>
 <style>
@@ -99,7 +99,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">14 Apr 2024</p>
+      <p class="date">16 Jun 2024</p>
     </div>
   </div>
   
@@ -112,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>This document accompanies the <strong><em>IUROPA Text Corpus</em></strong>, a database of judicial texts from the Court of Justice of the European Union (CJEU). The database comprises all types of judicial decisions and Advocate-General (AG) opinions at the paragraph level. Where available, both the French and English texts are included.</p>
-<p>The corpus, codebook and release notes are current as of <strong>version 0.3 (release 2024-04-14)</strong>.</p>
+<p>The corpus, codebook and release notes are current as of <strong>version 0.3 (release 2024-06-16)</strong>.</p>
 <p>The corpus remains work-in-progress. Please <a href="mailto:m.ovadek@ucl.ac.uk">let us know</a> if you notice an error in the data or if you have suggestions for improvements. Consult the <a href="https://iuropa.pol.gu.se/">IUROPA website</a> for more resources.</p>
 </section>
 <section id="citation" class="level2">
@@ -149,18 +149,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Curia</td>
-<td style="text-align: left;">23981</td>
-<td style="text-align: left;">36740</td>
+<td style="text-align: left;">24212</td>
+<td style="text-align: left;">37048</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Eur-Lex</td>
-<td style="text-align: left;">32452</td>
-<td style="text-align: left;">35604</td>
+<td style="text-align: left;">32629</td>
+<td style="text-align: left;">35805</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>IUROPA</strong></td>
-<td style="text-align: left;"><strong>36809</strong></td>
-<td style="text-align: left;"><strong>47378</strong></td>
+<td style="text-align: left;"><strong>37043</strong></td>
+<td style="text-align: left;"><strong>47690</strong></td>
 </tr>
 </tbody>
 </table>
@@ -170,7 +170,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>As of <strong>version 0.3 (release 2024-04-14)</strong>, the <strong><em>IUROPA Text Corpus</em></strong> contains a total of <code>10603178</code> paragraphs across <code>84187</code> documents. The number of documents in the corpus varies significantly not only over time, but also between courts and language versions.</p>
+<p>As of <strong>version 0.3 (release 2024-06-16)</strong>, the <strong><em>IUROPA Text Corpus</em></strong> contains a total of <code>10683925</code> paragraphs across <code>84733</code> documents. The number of documents in the corpus varies significantly not only over time, but also between courts and language versions.</p>
 <div class="cell-output-display">
 <table class="table">
 <caption>Comparison of EU courts</caption>
@@ -202,25 +202,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">94.23</td>
 <td style="text-align: right;">659</td>
 <td style="text-align: right;">244998</td>
-<td style="text-align: right;">10271423</td>
+<td style="text-align: right;">10271431</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Court of Justice</td>
-<td style="text-align: right;">58467</td>
+<td style="text-align: right;">58835</td>
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">122.33</td>
+<td style="text-align: right;">122.49</td>
 <td style="text-align: right;">5219</td>
-<td style="text-align: right;">7152218</td>
-<td style="text-align: right;">338987458</td>
+<td style="text-align: right;">7206452</td>
+<td style="text-align: right;">341579657</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">General Court</td>
-<td style="text-align: right;">23120</td>
+<td style="text-align: right;">23298</td>
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">138.67</td>
+<td style="text-align: right;">138.74</td>
 <td style="text-align: right;">7146</td>
-<td style="text-align: right;">3205962</td>
-<td style="text-align: right;">170459544</td>
+<td style="text-align: right;">3232475</td>
+<td style="text-align: right;">171899314</td>
 </tr>
 </tbody>
 </table>
@@ -233,7 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="plots/docs_n_docs_year.png" class="quarto-discovered-preview-image img-fluid figure-img"></p>
 </figure>
 </div>
-<p>The maximum number of French documents per year (<code>1966</code>) occurs in <code>2018</code>. An average year contains <code>667</code> documents in French and <code>518</code> documents in English. In instances when only the English version was made available in plain text – an issue almost exclusively affecting the General Court – the corpus might not include the French version (though if at least a summary is available, it is included). Otherwise and as a general rule, the French language sub-corpus is much more comprehensive.</p>
+<p>The maximum number of French documents per year (<code>1966</code>) occurs in <code>2018</code>. An average year contains <code>672</code> documents in French and <code>522</code> documents in English. In instances when only the English version was made available in plain text – an issue almost exclusively affecting the General Court – the corpus might not include the French version (though if at least a summary is available, it is included). Otherwise and as a general rule, the French language sub-corpus is much more comprehensive.</p>
 <p>The documents contain a varying number of paragraphs, ranging from <code>2</code> to <code>7146</code>. On average, French documents have <code>120</code> paragraphs, while English documents have an average of <code>118</code> paragraphs. In some cases, the corpus includes also the so-called “report for the hearing” (“rapport d’audience”) which the CJEU produced from the 1980s until 2012. Most of these reports have not yet been released to the public, but in the future they should become a part of the (or a separate) database.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align: center">
 <figure class="figure">
@@ -257,11 +257,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="plots/ocr_coding_progress.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>The digitization task remains work-in-progress. Cleaned data is added to the corpus on a rolling basis. Of the total <code>86649</code> pages of text that require manual checking or cleaning, <code>31343</code> have been completed and added to the corpus.</p>
+<p>The digitization task remains work-in-progress. Cleaned data is added to the corpus on a rolling basis. Of the total <code>86649</code> pages of text that require manual checking or cleaning, <code>31469</code> have been completed and added to the corpus.</p>
 <p>Priority has been given to French documents: so far, <code>56%</code> of pages in French and <code>14%</code> of English pages have been processed. <a href="mailto:m.ovadek@ucl.ac.uk">Contact us</a> if you wish to contribute to this ongoing work.</p>
 <p>As of version 0.3, all remaining documents were digitized using a combination of OCR and Open AI’s Generative Pre-trained Transformer 4 (GPT-4, in its early 2024 state) thanks to a collaboration with University of Oslo’s Centre for Computational and Data Science. The OCR output was fed to GPT-4 accompanied by the following prompt:</p>
 <blockquote class="blockquote">
-<p>Consider the following OCR output text and make corrections. Please note that the text to be corrected is in <language>. Fix spelling mistakes, do not add/remove words, make consistent word spacing, add missing spaces, fix font case issues within words, fix numbering issues, make consistent line breaks. In addition, please remove all unnecessary newline characters that break paragraphs incorrectly, detect paragraphs and ensure to add an extra line between paragraphs. Here is the text:</language></p>
+<p>Consider the following OCR output text and make corrections. Please note that the text to be corrected is in [language]. Fix spelling mistakes, do not add/remove words, make consistent word spacing, add missing spaces, fix font case issues within words, fix numbering issues, make consistent line breaks. In addition, please remove all unnecessary newline characters that break paragraphs incorrectly, detect paragraphs and ensure to add an extra line between paragraphs. Here is the text:</p>
 </blockquote>
 <p>The prompt was optimized by looking at edit (Levenshtein) distance between the GPT-augmented output and a subset of manually corrected OCR documents. In our testing, the normalized edit distance between the GPT- and manually corrected document was low – below 0.05 with 0 indicating identity – which suggests a satisfactory quality of output.</p>
 <p>We maintain that conclusion after manually inspecting a small subset of the processed documents. While the GPT-processed documents contain more errors than the manually corrected ones, ranging from undetected paragraphs to undesired word completion, for the most part they faithfully reproduce the underlying PDF documents. We continue to make manual corrections to the corpus in every update.</p>
@@ -277,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>guillemets <code>« »</code> are preceded and followed by a single space (<code></code>)</li>
 <li>all types of dashes and hyphens are replaced by a single <code>-</code></li>
 <li>all <code>n°</code> etc are converted into explicit <code>no</code> or <code>nos</code></li>
-<li>commas <code>,</code> are preceded by a space when the preceding character is a letter or a number</li>
+<li>commas <code>,</code> are not preceded by a space when the preceding character is a letter or a number</li>
 <li>commas <code>,</code> are followed by a space when the next character is a letter</li>
 <li>ellipsis <code>…</code> are always represented by three periods <code>...</code></li>
 <li>all types of characters used as single quotation marks are replaced by <code>'</code></li>
@@ -381,7 +381,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="release-notes" class="level2">
 <h2 class="anchored" data-anchor-id="release-notes">Release notes</h2>
-<p>Database versioning is encoded in the version number and the date of the release. Version 0.1 constituted the initial release of the database. Minor adjustments and updates are only reflected in the <strong>release date</strong> (currently <strong>2024-04-14</strong>), not the version number (currently <strong>0.3</strong>). Major changes are captured by the version number and documented below.</p>
+<p>Database versioning is encoded in the version number and the date of the release. Version 0.1 constituted the initial release of the database. Minor adjustments and updates are only reflected in the <strong>release date</strong> (currently <strong>2024-06-16</strong>), not the version number (currently <strong>0.3</strong>). Major changes are captured by the version number and documented below.</p>
 <section id="version-0.3" class="level3">
 <h3 class="anchored" data-anchor-id="version-0.3">Version 0.3</h3>
 <ul>
