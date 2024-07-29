@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dr Michal Ovádek">
-<meta name="dcterms.date" content="2024-06-16">
+<meta name="dcterms.date" content="2024-07-29">
 
 <title>IUROPA Text Corpus</title>
 <style>
@@ -99,7 +99,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">16 Jun 2024</p>
+      <p class="date">29 Jul 2024</p>
     </div>
   </div>
   
@@ -112,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>This document accompanies the <strong><em>IUROPA Text Corpus</em></strong>, a database of judicial texts from the Court of Justice of the European Union (CJEU). The database comprises all types of judicial decisions and Advocate-General (AG) opinions at the paragraph level. Where available, both the French and English texts are included.</p>
-<p>The corpus, codebook and release notes are current as of <strong>version 0.3 (release 2024-06-16)</strong>.</p>
+<p>The corpus, codebook and release notes are current as of <strong>version 0.3 (release 2024-07-29)</strong>.</p>
 <p>The corpus remains work-in-progress. Please <a href="mailto:m.ovadek@ucl.ac.uk">let us know</a> if you notice an error in the data or if you have suggestions for improvements. Consult the <a href="https://iuropa.pol.gu.se/">IUROPA website</a> for more resources.</p>
 </section>
 <section id="citation" class="level2">
@@ -131,6 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  url          <span class="ot">=</span> <span class="st">"https://iuropa.pol.gu.se/"</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Please note that <strong>this database is licensed for non-commercial use only</strong>. Unauthorized commercial use, including but not limited to resale, redistribution, or use as part of a commercial product or service, is strictly prohibited.</p>
 </section>
 <section id="rationale" class="level2">
 <h2 class="anchored" data-anchor-id="rationale">Rationale</h2>
@@ -149,18 +150,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Curia</td>
-<td style="text-align: left;">24212</td>
-<td style="text-align: left;">37048</td>
+<td style="text-align: left;">24334</td>
+<td style="text-align: left;">37227</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Eur-Lex</td>
-<td style="text-align: left;">32629</td>
-<td style="text-align: left;">35805</td>
+<td style="text-align: left;">32727</td>
+<td style="text-align: left;">35919</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>IUROPA</strong></td>
-<td style="text-align: left;"><strong>37043</strong></td>
-<td style="text-align: left;"><strong>47690</strong></td>
+<td style="text-align: left;"><strong>37170</strong></td>
+<td style="text-align: left;"><strong>47868</strong></td>
 </tr>
 </tbody>
 </table>
@@ -170,7 +171,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>As of <strong>version 0.3 (release 2024-06-16)</strong>, the <strong><em>IUROPA Text Corpus</em></strong> contains a total of <code>10683925</code> paragraphs across <code>84733</code> documents. The number of documents in the corpus varies significantly not only over time, but also between courts and language versions.</p>
+<p>As of <strong>version 0.3 (release 2024-07-29)</strong>, the <strong><em>IUROPA Text Corpus</em></strong> contains a total of <code>11328977</code> paragraphs across <code>85038</code> documents. The number of documents in the corpus varies significantly not only over time, but also between courts and language versions.</p>
 <div class="cell-output-display">
 <table class="table">
 <caption>Comparison of EU courts</caption>
@@ -199,28 +200,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Civil Service Tribunal</td>
 <td style="text-align: right;">2600</td>
 <td style="text-align: right;">11</td>
-<td style="text-align: right;">94.23</td>
+<td style="text-align: right;">94.80</td>
 <td style="text-align: right;">659</td>
-<td style="text-align: right;">244998</td>
-<td style="text-align: right;">10271431</td>
+<td style="text-align: right;">246487</td>
+<td style="text-align: right;">10389769</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Court of Justice</td>
-<td style="text-align: right;">58835</td>
+<td style="text-align: right;">59048</td>
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">122.49</td>
+<td style="text-align: right;">129.26</td>
 <td style="text-align: right;">5219</td>
-<td style="text-align: right;">7206452</td>
-<td style="text-align: right;">341579657</td>
+<td style="text-align: right;">7632498</td>
+<td style="text-align: right;">345353740</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">General Court</td>
-<td style="text-align: right;">23298</td>
+<td style="text-align: right;">23390</td>
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">138.74</td>
+<td style="text-align: right;">147.50</td>
 <td style="text-align: right;">7146</td>
-<td style="text-align: right;">3232475</td>
-<td style="text-align: right;">171899314</td>
+<td style="text-align: right;">3449992</td>
+<td style="text-align: right;">174467158</td>
 </tr>
 </tbody>
 </table>
@@ -233,8 +234,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="plots/docs_n_docs_year.png" class="quarto-discovered-preview-image img-fluid figure-img"></p>
 </figure>
 </div>
-<p>The maximum number of French documents per year (<code>1966</code>) occurs in <code>2018</code>. An average year contains <code>672</code> documents in French and <code>522</code> documents in English. In instances when only the English version was made available in plain text – an issue almost exclusively affecting the General Court – the corpus might not include the French version (though if at least a summary is available, it is included). Otherwise and as a general rule, the French language sub-corpus is much more comprehensive.</p>
-<p>The documents contain a varying number of paragraphs, ranging from <code>2</code> to <code>7146</code>. On average, French documents have <code>120</code> paragraphs, while English documents have an average of <code>118</code> paragraphs. In some cases, the corpus includes also the so-called “report for the hearing” (“rapport d’audience”) which the CJEU produced from the 1980s until 2012. Most of these reports have not yet been released to the public, but in the future they should become a part of the (or a separate) database.</p>
+<p>The maximum number of French documents per year (<code>1966</code>) occurs in <code>2018</code>. An average year contains <code>674</code> documents in French and <code>524</code> documents in English. In instances when only the English version was made available in plain text – an issue almost exclusively affecting the General Court – the corpus might not include the French version (though if at least a summary is available, it is included). Otherwise and as a general rule, the French language sub-corpus is much more comprehensive.</p>
+<p>The documents contain a varying number of paragraphs, ranging from <code>2</code> to <code>7146</code>. On average, French documents have <code>125</code> paragraphs, while English documents have an average of <code>123</code> paragraphs. In some cases, the corpus includes also the so-called “report for the hearing” (“rapport d’audience”) which the CJEU produced from the 1980s until 2012. Most of these reports have not yet been released to the public, but in the future they should become a part of the (or a separate) database.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align: center">
 <figure class="figure">
 <p></p><figcaption class="figure-caption">Average number of paragraphs per document</figcaption><p></p>
@@ -249,7 +250,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="plots/words_mean_n_paras.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>On average, French paragraphs contain <code>48</code> words, while English paragraphs have an average of <code>49</code> words.</p>
+<p>On average, French paragraphs contain <code>47</code> words, while English paragraphs have an average of <code>48</code> words.</p>
 <p>A major contribution of the <strong><em>IUROPA Text Corpus</em></strong> is the inclusion of digitized texts of older decisions. After applying state-of-the-art optical character recognition (OCR) to correctly segmented PDFs of documents from 1954 to 1989, the digitization pipeline involves highly labour-intensive cleaning of plain texts to ensure their high quality at the paragraph level.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align: center">
 <figure class="figure">
@@ -257,7 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="plots/ocr_coding_progress.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>The digitization task remains work-in-progress. Cleaned data is added to the corpus on a rolling basis. Of the total <code>86649</code> pages of text that require manual checking or cleaning, <code>31469</code> have been completed and added to the corpus.</p>
+<p>The digitization task remains work-in-progress. Cleaned data is added to the corpus on a rolling basis. Of the total <code>86649</code> pages of text that require manual checking or cleaning, <code>31491</code> have been completed and added to the corpus.</p>
 <p>Priority has been given to French documents: so far, <code>56%</code> of pages in French and <code>14%</code> of English pages have been processed. <a href="mailto:m.ovadek@ucl.ac.uk">Contact us</a> if you wish to contribute to this ongoing work.</p>
 <p>As of version 0.3, all remaining documents were digitized using a combination of OCR and Open AI’s Generative Pre-trained Transformer 4 (GPT-4, in its early 2024 state) thanks to a collaboration with University of Oslo’s Centre for Computational and Data Science. The OCR output was fed to GPT-4 accompanied by the following prompt:</p>
 <blockquote class="blockquote">
@@ -274,7 +275,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="standardization">Standardization</h3>
 <p>In the final stage of preparing the database, a number of standardization steps are performed on the texts to decrease substantively meaningless variation that is likely to be undesired by most users. Namely, the following standardization steps are implemented at the paragraph level:</p>
 <ul>
-<li>guillemets <code>« »</code> are preceded and followed by a single space (<code></code>)</li>
+<li>guillemets <code>« »</code> are preceded and followed by a single space ()</li>
 <li>all types of dashes and hyphens are replaced by a single <code>-</code></li>
 <li>all <code>n°</code> etc are converted into explicit <code>no</code> or <code>nos</code></li>
 <li>commas <code>,</code> are not preceded by a space when the preceding character is a letter or a number</li>
@@ -285,7 +286,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>a sequence of single quotation marks is replaced by a single <code>"</code></li>
 <li>opening parentheses <code>([{</code> are never followed by a space, closing parentheses <code>)]}</code> are never preceded by a space</li>
 <li>French characters <code>æ</code> and <code>œ</code> are replaced by <code>ae</code> and <code>oe</code> respectively</li>
-<li>all types of whitespace and blanks are converted into a single space (<code></code>)</li>
+<li>all types of whitespace and blanks are converted into a single space ()</li>
 <li>no leading or trailing whitespace at the beginning and end of paragraphs</li>
 </ul>
 </section>
@@ -368,12 +369,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td><code>paragraph_number</code></td>
 <td>The official paragraph number used in case citations. Note that some older decisions did not follow the numbering scheme which later became standard.</td>
-<td><code>integer</code> Paragraph numbers. <code>0</code> indicates no official paragraph number. Several paragraphs can belong to the same <code>paragraph_number</code>.</td>
+<td><code>integer</code> Paragraph numbers. <code>0</code> indicates no official paragraph number. Several paragraphs can belong to the same <code>paragraph_number</code>. Contains errors.</td>
 </tr>
 <tr class="odd">
 <td><code>nchar</code></td>
 <td>Number of characters in <code>text</code>.</td>
 <td><code>integer</code> Minimum <code>1</code>.</td>
+</tr>
+<tr class="even">
+<td><code>html_class</code></td>
+<td>Paragraph html class in the source file.</td>
+<td><code>character</code> Classes.</td>
+</tr>
+<tr class="odd">
+<td><code>html_attr</code></td>
+<td>Paragraph html attribute in the source file.</td>
+<td><code>character</code> Attributes.</td>
 </tr>
 </tbody>
 </table>
@@ -381,7 +392,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="release-notes" class="level2">
 <h2 class="anchored" data-anchor-id="release-notes">Release notes</h2>
-<p>Database versioning is encoded in the version number and the date of the release. Version 0.1 constituted the initial release of the database. Minor adjustments and updates are only reflected in the <strong>release date</strong> (currently <strong>2024-06-16</strong>), not the version number (currently <strong>0.3</strong>). Major changes are captured by the version number and documented below.</p>
+<p>Database versioning is encoded in the version number and the date of the release. Version 0.1 constituted the initial release of the database. Minor adjustments and updates are only reflected in the <strong>release date</strong> (currently <strong>2024-07-29</strong>), not the version number (currently <strong>0.3</strong>). Major changes are captured by the version number and documented below.</p>
 <section id="version-0.3" class="level3">
 <h3 class="anchored" data-anchor-id="version-0.3">Version 0.3</h3>
 <ul>
@@ -389,6 +400,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Where a full decision is missing, but a summary exists, the summary is used in the corpus (French documents only)</li>
 <li>Added ten missing AG opinions (French only)</li>
 <li>Additional manual corrections</li>
+<li>The database now ships with <code>html_class</code> where available</li>
+<li>Improvements to paragraph numbering, but due to persistent issues the number is no longer deleted from <code>text</code></li>
 </ul>
 </section>
 <section id="version-0.2" class="level3">
